@@ -1,0 +1,11 @@
+{% extends 'polls/base.html' %}
+
+{% block content1 %}
+{% if listQuestion %}
+{% for item in listQuestion %}
+<p>{{item.question_text}}</p>
+{% endfor %}
+{% else %}
+<h2> No questions in DB</h2>
+{% endif %}
+{% endblock %}
